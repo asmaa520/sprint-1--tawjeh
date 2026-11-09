@@ -1494,6 +1494,389 @@
                 }
             }
             #endregion
+            //task4
+            #region task4
+            // 1. Display the first 10 natural numbers.
+            {
+                for (int i = 1; i <= 10; i++)
+                {
+                    Console.Write(i + " ");
+                }
+
+                Console.WriteLine();
+            }
+
+
+            // 2. Find the sum of the first 10 natural numbers.
+            {
+                int sum = 0;
+
+                for (int i = 1; i <= 10; i++)
+                {
+                    sum += i;
+                }
+
+                Console.WriteLine("Sum = " + sum);
+            }
+
+
+            // 3. Display the first n natural numbers and their sum.
+            {
+                Console.Write("Enter n: ");
+                int n = int.Parse(Console.ReadLine());
+
+                int sum = 0;
+
+                for (int i = 1; i <= n; i++)
+                {
+                    Console.Write(i + " ");
+                    sum += i;
+                }
+
+                Console.WriteLine("\nSum = " + sum);
+            }
+
+
+            // 4. Read 10 numbers and calculate their sum and average.
+            {
+                double sum = 0;
+
+                for (int i = 1; i <= 10; i++)
+                {
+                    Console.Write("Enter number " + i + ": ");
+                    double number = double.Parse(Console.ReadLine());
+
+                    sum += number;
+                }
+
+                double average = sum / 10;
+
+                Console.WriteLine("Sum = " + sum);
+                Console.WriteLine("Average = " + average);
+            }
+
+
+            // 5. Display the cubes of integers from 1 through a supplied limit.
+            {
+                Console.Write("Enter the limit: ");
+                int limit = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= limit; i++)
+                {
+                    Console.WriteLine(i + " cube = " + (i * i * i));
+                }
+            }
+
+
+            // 6. Display the multiplication table of a supplied integer.
+            {
+                Console.Write("Enter a number: ");
+                int number = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= 10; i++)
+                {
+                    Console.WriteLine(number + " x " + i + " = " + (number * i));
+                }
+            }
+
+
+            // 7. Display multiplication tables from 1 through n vertically.
+            {
+                Console.Write("Enter n: ");
+                int n = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= n; i++)
+                {
+                    Console.WriteLine("Multiplication table of " + i);
+
+                    for (int j = 1; j <= 10; j++)
+                    {
+                        Console.WriteLine(i + " x " + j + " = " + (i * j));
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            // 8. Display the first n odd natural numbers and their sum.
+            {
+                Console.Write("Enter n: ");
+                int n = int.Parse(Console.ReadLine());
+
+                int sum = 0;
+                int odd = 1;
+
+                for (int i = 1; i <= n; i++)
+                {
+                    Console.Write(odd + " ");
+                    sum += odd;
+                    odd += 2;
+                }
+
+                Console.WriteLine("\nSum = " + sum);
+            }
+
+
+            // 9. Print a right-angle triangle made of asterisks.
+            {
+                Console.Write("Enter number of rows: ");
+                int rows = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= rows; i++)
+                {
+                    for (int j = 1; j <= i; j++)
+                    {
+                        Console.Write("*");
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            // 10. Print a right-angle triangle: 1, 12, 123, ...
+            {
+                Console.Write("Enter number of rows: ");
+                int rows = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= rows; i++)
+                {
+                    for (int j = 1; j <= i; j++)
+                    {
+                        Console.Write(j);
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            // 11. Print a right-angle triangle: 1, 22, 333, ...
+            {
+                Console.Write("Enter number of rows: ");
+                int rows = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= rows; i++)
+                {
+                    for (int j = 1; j <= i; j++)
+                    {
+                        Console.Write(i);
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            // 12. Print a right-angle triangle filled with consecutive increasing numbers.
+            {
+                Console.Write("Enter number of rows: ");
+                int rows = int.Parse(Console.ReadLine());
+
+                int number = 1;
+
+                for (int i = 1; i <= rows; i++)
+                {
+                    for (int j = 1; j <= i; j++)
+                    {
+                        Console.Write(number + " ");
+                        number++;
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            // 13. Print a number pyramid filled with consecutive increasing numbers.
+            {
+                Console.Write("Enter number of rows: ");
+                int rows = int.Parse(Console.ReadLine());
+
+                int number = 1;
+
+                for (int i = 1; i <= rows; i++)
+                {
+                    for (int j = 1; j <= rows - i; j++)
+                    {
+                        Console.Write("  ");
+                    }
+
+                    for (int j = 1; j <= i; j++)
+                    {
+                        Console.Write(number + " ");
+                        number++;
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            // 14. Print a centered pyramid made of asterisks.
+            {
+                Console.Write("Enter number of rows: ");
+                int rows = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= rows; i++)
+                {
+                    for (int j = 1; j <= rows - i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    for (int j = 1; j <= (2 * i) - 1; j++)
+                    {
+                        Console.Write("*");
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            // 15. Calculate the factorial of a supplied number.
+            {
+                Console.Write("Enter a number: ");
+                int number = int.Parse(Console.ReadLine());
+
+                long factorial = 1;
+
+                for (int i = 1; i <= number; i++)
+                {
+                    factorial *= i;
+                }
+
+                Console.WriteLine("Factorial = " + factorial);
+            }
+
+
+            // 16. Display the first n even natural numbers and their sum.
+            {
+                Console.Write("Enter n: ");
+                int n = int.Parse(Console.ReadLine());
+
+                int sum = 0;
+
+                for (int i = 1; i <= n; i++)
+                {
+                    int even = i * 2;
+
+                    Console.Write(even + " ");
+                    sum += even;
+                }
+
+                Console.WriteLine("\nSum = " + sum);
+            }
+
+
+            // 17. Print a number pyramid where each row repeats its row number.
+            {
+                Console.Write("Enter number of rows: ");
+                int rows = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= rows; i++)
+                {
+                    for (int j = 1; j <= rows - i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    for (int j = 1; j <= i; j++)
+                    {
+                        Console.Write(i + " ");
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            // 18. Calculate the first n terms of the series:
+            // 1 - x^2/2! + x^4/4! - ...
+            {
+                Console.Write("Enter x: ");
+                double x = double.Parse(Console.ReadLine());
+
+                Console.Write("Enter number of terms: ");
+                int n = int.Parse(Console.ReadLine());
+
+                double sum = 0;
+
+                for (int i = 0; i < n; i++)
+                {
+                    double power = Math.Pow(x, 2 * i);
+
+                    double factorial = 1;
+
+                    for (int j = 1; j <= 2 * i; j++)
+                    {
+                        factorial *= j;
+                    }
+
+                    double term = power / factorial;
+
+                    if (i % 2 == 0)
+                    {
+                        sum += term;
+                    }
+                    else
+                    {
+                        sum -= term;
+                    }
+                }
+
+                Console.WriteLine("Sum = " + sum);
+            }
+
+
+            // 19. Display n terms of the harmonic series and calculate their sum.
+            {
+                Console.Write("Enter n: ");
+                int n = int.Parse(Console.ReadLine());
+
+                double sum = 0;
+
+                for (int i = 1; i <= n; i++)
+                {
+                    double term = 1.0 / i;
+
+                    Console.Write("1/" + i);
+
+                    if (i < n)
+                    {
+                        Console.Write(" + ");
+                    }
+
+                    sum += term;
+                }
+
+                Console.WriteLine("\nSum = " + sum);
+            }
+
+
+            // 20. Print an asterisk pyramid where each row contains an odd number of stars.
+            {
+                Console.Write("Enter number of rows: ");
+                int rows = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= rows; i++)
+                {
+                    for (int j = 1; j <= rows - i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    for (int j = 1; j <= (2 * i) - 1; j++)
+                    {
+                        Console.Write("*");
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+            #endregion
         }
     }
 }
