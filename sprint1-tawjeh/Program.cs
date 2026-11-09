@@ -682,6 +682,221 @@
                 
             }
             #endregion
+
+            //task2 
+            #region task2
+            // Question 1
+           
+            char letter1 = char.Parse(Console.ReadLine());
+            char letter2 = char.Parse(Console.ReadLine());
+            char letter3 = char.Parse(Console.ReadLine());
+
+            Console.WriteLine(letter3);
+            Console.WriteLine(letter2);
+            Console.WriteLine(letter1);
+
+
+            // Question 2
+          
+            Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter width: ");
+            int width = int.Parse(Console.ReadLine());
+
+            for (int i = width; i >= 1; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(number);
+                }
+
+                Console.WriteLine();
+            }
+
+
+            // Question 3
+          
+            string correctID = "admin";
+            string correctPassword = "1234";
+
+            int attempts = 0;
+
+            while (attempts < 3)
+            {
+                Console.Write("Enter ID: ");
+                string id = Console.ReadLine();
+
+                Console.Write("Enter Password: ");
+                string password = Console.ReadLine();
+
+                if (id == correctID && password == correctPassword)
+                {
+                    Console.WriteLine("Login Successful");
+                    break;
+                }
+                else
+                {
+                    attempts++;
+                    Console.WriteLine("Invalid ID or Password");
+                }
+            }
+
+            if (attempts == 3)
+            {
+                Console.WriteLine("Access Denied");
+            }
+
+
+            // Question 4
+            Console.Write("Enter first number: ");
+            double num1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter second number: ");
+            double num2 = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter operator: ");
+            char op = char.Parse(Console.ReadLine());
+
+            switch (op)
+            {
+                case '+':
+                    Console.WriteLine(num1 + num2);
+                    break;
+
+                case '-':
+                    Console.WriteLine(num1 - num2);
+                    break;
+
+                case '*':
+                case 'x':
+                case 'X':
+                    Console.WriteLine(num1 * num2);
+                    break;
+
+                case '/':
+                    if (num2 != 0)
+                        Console.WriteLine(num1 / num2);
+                    else
+                        Console.WriteLine("Cannot divide by zero");
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid Operator");
+                    break;
+            }
+
+
+            // Question 5
+
+            Console.Write("Enter radius: ");
+            double radius = double.Parse(Console.ReadLine());
+
+            double perimeter = 2 * Math.PI * radius;
+            double area = Math.PI * radius * radius;
+
+            Console.WriteLine("Perimeter = " + perimeter);
+            Console.WriteLine("Area = " + area);
+
+
+            // Question 6
+
+            for (int y = -5; y <= 5; y++)
+            {
+                int x = y * y + 2 * y + 1;
+
+                Console.WriteLine("y = " + y + " , x = " + x);
+            }
+
+
+            // Question 7
+
+            Console.Write("Enter distance in meters: ");
+            double distance = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter hours: ");
+            int hours = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter minutes: ");
+            int minutes = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter seconds: ");
+            int seconds = int.Parse(Console.ReadLine());
+
+            double totalSeconds = hours * 3600 + minutes * 60 + seconds;
+
+            if (totalSeconds > 0)
+            {
+                double speedMS = distance / totalSeconds;
+                double speedKMH = speedMS * 3.6;
+                double speedMPH = speedMS * 2.23694;
+
+                Console.WriteLine("Speed in m/s = " + speedMS);
+                Console.WriteLine("Speed in km/h = " + speedKMH);
+                Console.WriteLine("Speed in mph = " + speedMPH);
+            }
+            else
+            {
+                Console.WriteLine("Time must be greater than zero");
+            }
+
+
+            // Question 8
+
+            Console.Write("Enter sphere radius: ");
+            double sphereRadius = double.Parse(Console.ReadLine());
+
+            double surfaceArea = 4 * Math.PI * sphereRadius * sphereRadius;
+
+            double volume = (4.0 / 3.0) * Math.PI * sphereRadius * sphereRadius * sphereRadius;
+
+            Console.WriteLine("Surface Area = " + surfaceArea);
+            Console.WriteLine("Volume = " + volume);
+
+
+            // Question 9
+
+            Console.Write("Enter a character: ");
+            char ch = char.Parse(Console.ReadLine());
+
+            if ("aeiouAEIOU".Contains(ch))
+            {
+                Console.WriteLine("Vowel");
+            }
+            else if (char.IsDigit(ch))
+            {
+                Console.WriteLine("Digit");
+            }
+            else
+            {
+                Console.WriteLine("Other Symbol");
+            }
+
+
+            // Question 10
+
+            Console.Write("Enter first number: ");
+            int firstNumber = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter second number: ");
+            int secondNumber = int.Parse(Console.ReadLine());
+
+            bool result = firstNumber % 2 == secondNumber % 2;
+
+            Console.WriteLine(result);
+
+
+            // Question 11
+
+            Console.Write("Enter a decimal number: ");
+            int decimalNumber = int.Parse(Console.ReadLine());
+
+            string binary = Convert.ToString(decimalNumber, 2);
+
+            Console.WriteLine("Binary = " + binary);
+            #endregion
+
+
         }
     }
 }
