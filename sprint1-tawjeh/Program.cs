@@ -1877,6 +1877,673 @@
                 }
             }
             #endregion
+            //task4
+            #region task5
+            // 1. Read a string and print it.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                Console.WriteLine("String = " + text);
+            }
+
+
+            // 2. Find a string's length without using a library length function.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                int count = 0;
+
+                foreach (char c in text)
+                {
+                    count++;
+                }
+
+                Console.WriteLine("Length = " + count);
+            }
+
+
+            // 3. Print the individual characters in a string.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                foreach (char c in text)
+                {
+                    Console.WriteLine(c);
+                }
+            }
+
+
+            // 4. Print the characters of a string in reverse order.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                for (int i = text.Length - 1; i >= 0; i--)
+                {
+                    Console.Write(text[i]);
+                }
+
+                Console.WriteLine();
+            }
+
+
+            // 5. Count the words in a string.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                int count = 0;
+                bool insideWord = false;
+
+                foreach (char c in text)
+                {
+                    if (!char.IsWhiteSpace(c))
+                    {
+                        if (!insideWord)
+                        {
+                            count++;
+                            insideWord = true;
+                        }
+                    }
+                    else
+                    {
+                        insideWord = false;
+                    }
+                }
+
+                Console.WriteLine("Number of words = " + count);
+            }
+
+
+            // 6. Compare two strings without string-library comparison functions.
+            {
+                Console.Write("Enter first string: ");
+                string first = Console.ReadLine();
+
+                Console.Write("Enter second string: ");
+                string second = Console.ReadLine();
+
+                bool equal = true;
+
+                if (first.Length != second.Length)
+                {
+                    equal = false;
+                }
+                else
+                {
+                    for (int i = 0; i < first.Length; i++)
+                    {
+                        if (first[i] != second[i])
+                        {
+                            equal = false;
+                            break;
+                        }
+                    }
+                }
+
+                if (equal)
+                {
+                    Console.WriteLine("Strings are equal.");
+                }
+                else
+                {
+                    Console.WriteLine("Strings are not equal.");
+                }
+            }
+
+
+            // 7. Count alphabetic characters, digits, and special characters.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                int letters = 0;
+                int digits = 0;
+                int special = 0;
+
+                foreach (char c in text)
+                {
+                    if (char.IsLetter(c))
+                    {
+                        letters++;
+                    }
+                    else if (char.IsDigit(c))
+                    {
+                        digits++;
+                    }
+                    else
+                    {
+                        special++;
+                    }
+                }
+
+                Console.WriteLine("Alphabetic characters = " + letters);
+                Console.WriteLine("Digits = " + digits);
+                Console.WriteLine("Special characters = " + special);
+            }
+
+
+            // 8. Copy one string into another and report the number of copied characters.
+            {
+                Console.Write("Enter a string: ");
+                string original = Console.ReadLine();
+
+                char[] copiedCharacters = new char[original.Length];
+
+                int count = 0;
+
+                foreach (char c in original)
+                {
+                    copiedCharacters[count] = c;
+                    count++;
+                }
+
+                string copied = new string(copiedCharacters);
+
+                Console.WriteLine("Copied string = " + copied);
+                Console.WriteLine("Number of copied characters = " + count);
+            }
+
+
+            // 9. Count vowels and consonants in a string.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                int vowels = 0;
+                int consonants = 0;
+
+                foreach (char c in text)
+                {
+                    if (char.IsLetter(c))
+                    {
+                        char lower = char.ToLower(c);
+
+                        if (lower == 'a' || lower == 'e' ||
+                            lower == 'i' || lower == 'o' ||
+                            lower == 'u')
+                        {
+                            vowels++;
+                        }
+                        else
+                        {
+                            consonants++;
+                        }
+                    }
+                }
+
+                Console.WriteLine("Vowels = " + vowels);
+                Console.WriteLine("Consonants = " + consonants);
+            }
+
+
+            // 10. Find the most frequently occurring character in a string.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                if (text.Length == 0)
+                {
+                    Console.WriteLine("The string is empty.");
+                }
+                else
+                {
+                    char mostFrequent = text[0];
+                    int maxCount = 0;
+
+                    for (int i = 0; i < text.Length; i++)
+                    {
+                        int count = 0;
+
+                        for (int j = 0; j < text.Length; j++)
+                        {
+                            if (text[i] == text[j])
+                            {
+                                count++;
+                            }
+                        }
+
+                        if (count > maxCount)
+                        {
+                            maxCount = count;
+                            mostFrequent = text[i];
+                        }
+                    }
+
+                    Console.WriteLine("Most frequent character = " + mostFrequent);
+                    Console.WriteLine("Frequency = " + maxCount);
+                }
+            }
+
+
+            // 11. Sort the characters of a string in ascending order.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                char[] characters = text.ToCharArray();
+
+                for (int i = 0; i < characters.Length - 1; i++)
+                {
+                    for (int j = 0; j < characters.Length - 1 - i; j++)
+                    {
+                        if (characters[j] > characters[j + 1])
+                        {
+                            char temp = characters[j];
+                            characters[j] = characters[j + 1];
+                            characters[j + 1] = temp;
+                        }
+                    }
+                }
+
+                string sorted = new string(characters);
+
+                Console.WriteLine("Sorted string = " + sorted);
+            }
+
+
+            // 12. Read multiple strings and sort them using bubble sort.
+            {
+                Console.Write("Enter number of strings: ");
+                int n = int.Parse(Console.ReadLine());
+
+                string[] words = new string[n];
+
+                for (int i = 0; i < n; i++)
+                {
+                    Console.Write("Enter string " + (i + 1) + ": ");
+                    words[i] = Console.ReadLine();
+                }
+
+                for (int i = 0; i < n - 1; i++)
+                {
+                    for (int j = 0; j < n - 1 - i; j++)
+                    {
+                        int comparison = 0;
+
+                        int minLength = Math.Min(words[j].Length, words[j + 1].Length);
+
+                        for (int k = 0; k < minLength; k++)
+                        {
+                            if (words[j][k] > words[j + 1][k])
+                            {
+                                comparison = 1;
+                                break;
+                            }
+                            else if (words[j][k] < words[j + 1][k])
+                            {
+                                comparison = -1;
+                                break;
+                            }
+                        }
+
+                        if (comparison == 0)
+                        {
+                            if (words[j].Length > words[j + 1].Length)
+                            {
+                                comparison = 1;
+                            }
+                            else if (words[j].Length < words[j + 1].Length)
+                            {
+                                comparison = -1;
+                            }
+                        }
+
+                        if (comparison > 0)
+                        {
+                            string temp = words[j];
+                            words[j] = words[j + 1];
+                            words[j + 1] = temp;
+                        }
+                    }
+                }
+
+                Console.WriteLine("Sorted strings:");
+
+                for (int i = 0; i < n; i++)
+                {
+                    Console.WriteLine(words[i]);
+                }
+            }
+
+
+            // 13. Extract a substring without using the library substring function.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                Console.Write("Enter starting position: ");
+                int start = int.Parse(Console.ReadLine());
+
+                Console.Write("Enter substring length: ");
+                int subLength = int.Parse(Console.ReadLine());
+
+                if (start >= 0 && subLength >= 0 &&
+                    start + subLength <= text.Length)
+                {
+                    char[] resultCharacters = new char[subLength];
+
+                    for (int i = 0; i < subLength; i++)
+                    {
+                        resultCharacters[i] = text[start + i];
+                    }
+
+                    string result = new string(resultCharacters);
+
+                    Console.WriteLine("Substring = " + result);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid starting position or length.");
+                }
+            }
+
+
+            // 14. Determine whether a specified substring occurs in a string.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                Console.Write("Enter substring to search: ");
+                string sub = Console.ReadLine();
+
+                bool found = false;
+
+                if (sub.Length == 0)
+                {
+                    found = true;
+                }
+                else
+                {
+                    for (int i = 0; i <= text.Length - sub.Length; i++)
+                    {
+                        bool match = true;
+
+                        for (int j = 0; j < sub.Length; j++)
+                        {
+                            if (text[i + j] != sub[j])
+                            {
+                                match = false;
+                                break;
+                            }
+                        }
+
+                        if (match)
+                        {
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (found)
+                {
+                    Console.WriteLine("Substring found.");
+                }
+                else
+                {
+                    Console.WriteLine("Substring not found.");
+                }
+            }
+
+
+            // 15. Swap uppercase letters to lowercase and lowercase letters to uppercase.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                char[] characters = text.ToCharArray();
+
+                for (int i = 0; i < characters.Length; i++)
+                {
+                    if (char.IsUpper(characters[i]))
+                    {
+                        characters[i] = char.ToLower(characters[i]);
+                    }
+                    else if (char.IsLower(characters[i]))
+                    {
+                        characters[i] = char.ToUpper(characters[i]);
+                    }
+                }
+
+                string result = new string(characters);
+
+                Console.WriteLine("Result = " + result);
+            }
+
+
+            // 16. Validate a username and password.
+            {
+                Console.Write("Enter username: ");
+                string username = Console.ReadLine();
+
+                Console.Write("Enter password: ");
+                string password = Console.ReadLine();
+
+                bool validUsername = username.Length >= 5;
+                bool validPassword = password.Length >= 8;
+
+                foreach (char c in username)
+                {
+                    if (!char.IsLetterOrDigit(c))
+                    {
+                        validUsername = false;
+                        break;
+                    }
+                }
+
+                bool hasUpper = false;
+                bool hasLower = false;
+                bool hasDigit = false;
+                bool hasSpecial = false;
+
+                foreach (char c in password)
+                {
+                    if (char.IsUpper(c))
+                    {
+                        hasUpper = true;
+                    }
+                    else if (char.IsLower(c))
+                    {
+                        hasLower = true;
+                    }
+                    else if (char.IsDigit(c))
+                    {
+                        hasDigit = true;
+                    }
+                    else
+                    {
+                        hasSpecial = true;
+                    }
+                }
+
+                validPassword = validPassword &&
+                                hasUpper && hasLower &&
+                                hasDigit && hasSpecial;
+
+                if (validUsername && validPassword)
+                {
+                    Console.WriteLine("Valid username and password.");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid username or password.");
+                }
+            }
+
+
+            // 17. Find the position of a substring within a string.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                Console.Write("Enter substring: ");
+                string sub = Console.ReadLine();
+
+                int position = -1;
+
+                if (sub.Length == 0)
+                {
+                    position = 0;
+                }
+                else
+                {
+                    for (int i = 0; i <= text.Length - sub.Length; i++)
+                    {
+                        bool match = true;
+
+                        for (int j = 0; j < sub.Length; j++)
+                        {
+                            if (text[i + j] != sub[j])
+                            {
+                                match = false;
+                                break;
+                            }
+                        }
+
+                        if (match)
+                        {
+                            position = i;
+                            break;
+                        }
+                    }
+                }
+
+                if (position != -1)
+                {
+                    Console.WriteLine("Position = " + position);
+                }
+                else
+                {
+                    Console.WriteLine("Substring not found.");
+                }
+            }
+
+
+            // 18. Determine whether a character is alphabetic and, if so, whether it is uppercase or lowercase.
+            {
+                Console.Write("Enter a character: ");
+                char ch = char.Parse(Console.ReadLine());
+
+                if (char.IsLetter(ch))
+                {
+                    Console.WriteLine("It is an alphabetic character.");
+
+                    if (char.IsUpper(ch))
+                    {
+                        Console.WriteLine("It is uppercase.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("It is lowercase.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("It is not an alphabetic character.");
+                }
+            }
+
+
+            // 19. Count how many times a substring occurs in a string.
+            {
+                Console.Write("Enter a string: ");
+                string text = Console.ReadLine();
+
+                Console.Write("Enter substring: ");
+                string sub = Console.ReadLine();
+
+                int count = 0;
+
+                if (sub.Length > 0)
+                {
+                    for (int i = 0; i <= text.Length - sub.Length; i++)
+                    {
+                        bool match = true;
+
+                        for (int j = 0; j < sub.Length; j++)
+                        {
+                            if (text[i + j] != sub[j])
+                            {
+                                match = false;
+                                break;
+                            }
+                        }
+
+                        if (match)
+                        {
+                            count++;
+                        }
+                    }
+                }
+
+                Console.WriteLine("Occurrences = " + count);
+            }
+
+
+            // 20. Insert a substring before the first occurrence of another string.
+            {
+                Console.Write("Enter the original string: ");
+                string text = Console.ReadLine();
+
+                Console.Write("Enter the substring to search for: ");
+                string search = Console.ReadLine();
+
+                Console.Write("Enter the substring to insert: ");
+                string insert = Console.ReadLine();
+
+                int position = -1;
+
+                if (search.Length > 0)
+                {
+                    for (int i = 0; i <= text.Length - search.Length; i++)
+                    {
+                        bool match = true;
+
+                        for (int j = 0; j < search.Length; j++)
+                        {
+                            if (text[i + j] != search[j])
+                            {
+                                match = false;
+                                break;
+                            }
+                        }
+
+                        if (match)
+                        {
+                            position = i;
+                            break;
+                        }
+                    }
+                }
+
+                if (position != -1)
+                {
+                    string result = "";
+
+                    for (int i = 0; i < position; i++)
+                    {
+                        result += text[i];
+                    }
+
+                    result += insert;
+
+                    for (int i = position; i < text.Length; i++)
+                    {
+                        result += text[i];
+                    }
+
+                    Console.WriteLine("Result = " + result);
+                }
+                else
+                {
+                    Console.WriteLine("Substring not found.");
+                }
+            }
+            #endregion
         }
     }
 }
