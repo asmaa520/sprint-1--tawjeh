@@ -1,0 +1,16 @@
+D:\sprint1-tawjeh\sprint1-tawjeh\bin\Debug\net10.0\sprint1-tawjeh.exe
+D:\sprint1-tawjeh\sprint1-tawjeh\bin\Debug\net10.0\sprint1-tawjeh.deps.json
+D:\sprint1-tawjeh\sprint1-tawjeh\bin\Debug\net10.0\sprint1-tawjeh.runtimeconfig.json
+D:\sprint1-tawjeh\sprint1-tawjeh\bin\Debug\net10.0\sprint1-tawjeh.dll
+D:\sprint1-tawjeh\sprint1-tawjeh\bin\Debug\net10.0\sprint1-tawjeh.pdb
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\sprint1-tawjeh.GeneratedMSBuildEditorConfig.editorconfig
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\sprint1-tawjeh.AssemblyInfoInputs.cache
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\sprint1-tawjeh.AssemblyInfo.cs
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\sprint1-tawjeh.csproj.CoreCompileInputs.cache
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\sprint1-tawjeh.sourcelink.json
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\sprint1-tawjeh.dll
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\refint\sprint1-tawjeh.dll
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\sprint1-tawjeh.pdb
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\sprint1-tawjeh.genruntimeconfig.cache
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\ref\sprint1-tawjeh.dll
+D:\sprint1-tawjeh\sprint1-tawjeh\obj\Debug\net10.0\sprint1-.286E29DB.Up2Date
